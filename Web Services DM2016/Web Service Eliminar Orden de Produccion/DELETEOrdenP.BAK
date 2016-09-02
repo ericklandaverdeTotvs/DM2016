@@ -15,7 +15,7 @@ Local cProd:= PRODUTO
 Local cNum:= NUM
 Local cItem:= ITEM
 Local cSequen:= SEQUEN
-//Local cXML:= '<?xml version="1.0" encoding="UTF-8"?>' + CLRF
+Local cXML:= '<?xml version="1.0" encoding="UTF-8"?>' + CLRF
 
 Private lMsErroAuto:= .F.
  

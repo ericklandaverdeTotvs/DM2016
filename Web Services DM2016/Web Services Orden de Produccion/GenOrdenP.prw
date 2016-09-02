@@ -20,7 +20,7 @@ Local nCant:= val(CANTIDOP)
 Local dOpIni:= stod(FECHINIOP)
 Local dOpFin:= stod(FECHFINOP)
 Local dOprod:= stod(FECHAORDP)
-Local cConsSub:= alltrim(CONSIDSUBSTRUCT)
+Local cConsSub:= Alltrim(CONSIDSUBSTRUCT)
 
 Local cEmitio:= EMITIO
 Local cReviso:= REVISO
@@ -115,15 +115,15 @@ If 	cConsSub$"SI|NO" .or. empty(cConsSub)
 			while (Querrrry)->D4_OP == cItemOP
 				cCodD4:= (Querrrry)->D4_COD
 				
-          		if alltrim(evalTipo(alltrim(cCodD4))== 'PI'
+          		if alltrim(evalTipo(Alltrim(cCodD4))== 'PI'
           			cLoteCtl:= D4_LOTECTL
           		endif
 
-				cXML += '<Producto>'+alltrim(cCodD4)+'</Producto>'+ CLRF
+				cXML += '<Producto>'+Alltrim(cCodD4)+'</Producto>'+ CLRF
 				(Querrrry)->(dbskip())
 			enddo
 			cXML += '</Productos>'+ CLRF
-			cXML += '<Lote>'+cLoteCtl+'</Lote>'+ CLRF
+			cXML += '<Lote>'+Alltrim(cLoteCtl)+'</Lote>'+ CLRF
 			cXML += '</OP>'
 		enddo
 
